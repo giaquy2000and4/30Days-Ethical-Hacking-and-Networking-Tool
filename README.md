@@ -11,13 +11,13 @@
 ```
 30-day-ethical-hacking-tools/
 ├── tuan1-tham-do/
-│   ├── ngay01-quet-cong/
-│   ├── ngay02-tra-ip/
-│   ├── ngay03-quet-subnet/
-│   ├── ngay04-traceroute/
-│   ├── ngay05-quet-arp/
-│   ├── ngay06-bat-http/
-│   └── ngay07-phan-tich-pcap/
+│   ├── Day1-Port-Scanner/
+│   ├── Day2-ISP-Locator/
+│   ├── Day3-Ping-Sweep/
+│   ├── Day4-Trace-Route/
+│   ├── Day5-ARP-Scan/
+│   ├── Day6-HTTP-Capture/
+│   └── Day7-PCAP-Analyzer/
 ├── tuan2-tu-dong-hoa/
 │   ├── ngay08-doi-mac/
 │   ├── ngay09-tan-cong-dhcp/
