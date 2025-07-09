@@ -1,4 +1,4 @@
-# 💥 Thử Thách 30 Ngày: Xây Dựng Công Cụ Ethical Hacking & Mạng
+#  Thử Thách 30 Ngày: Xây Dựng Công Cụ Ethical Hacking & Mạng
 
 > **⚠️ TUYÊN BỐ PHÁP LÝ**: Tất cả các công cụ và kỹ thuật trong repository này chỉ dành cho mục đích giáo dục. Chỉ sử dụng trên các hệ thống bạn sở hữu hoặc có quyền kiểm thử rõ ràng. Truy cập trái phép vào hệ thống máy tính là bất hợp pháp và phi đạo đức.
 
@@ -6,7 +6,7 @@
 
 Đây là thử thách 30 ngày, mỗi ngày bạn sẽ xây dựng một công cụ ethical hacking hoặc mạng nhỏ. Tập trung vào **triển khai thực tế**, **ứng dụng thực tế**, và **mô phỏng** các tình huống bảo mật trong môi trường được kiểm soát.
 
-## 🏗️ Cấu Trúc Dự Án
+##  Cấu Trúc Dự Án
 
 ```
 30-day-ethical-hacking-tools/
@@ -49,7 +49,7 @@
 └── README.md
 ```
 
-## 🗓️ Phân Chia Theo Tuần
+##  Phân Chia Theo Tuần
 
 ### Tuần 1: Thăm Dò & Giám Sát Mạng
 **Ngày 1-7**: Xây dựng công cụ khám phá mạng và thu thập thông tin thụ động
@@ -119,7 +119,7 @@ pip install matplotlib graphviz influxdb-client
 pip install hashlib threading socket subprocess
 ```
 
-## 🚀 Bắt Đầu
+##  Bắt Đầu
 
 ### 1. Clone Repository
 ```bash
@@ -148,13 +148,13 @@ python port_scanner.py --help
 
 Mỗi ngày theo cấu trúc này:
 
-1. **📚 Học**: Hiểu mục đích và lý thuyết của công cụ
-2. **🔧 Xây Dựng**: Triển khai công cụ với code sạch, có tài liệu
-3. **🧪 Kiểm Thử**: Xác minh chức năng trong môi trường kiểm soát
-4. **📝 Tài Liệu**: Viết hướng dẫn sử dụng và bài học rút ra
-5. **🔄 Cải Thiện**: Tái cấu trúc và tối ưu hóa code
+1. ** Học**: Hiểu mục đích và lý thuyết của công cụ
+2. ** Xây Dựng**: Triển khai công cụ với code sạch, có tài liệu
+3. ** Kiểm Thử**: Xác minh chức năng trong môi trường kiểm soát
+4. ** Tài Liệu**: Viết hướng dẫn sử dụng và bài học rút ra
+5. ** Cải Thiện**: Tái cấu trúc và tối ưu hóa code
 
-## 🎓 Mục Tiêu Học Tập
+##  Mục Tiêu Học Tập
 
 Hoàn thành thử thách này, bạn sẽ:
 - Hiểu các công cụ và kỹ thuật bảo mật mạng phổ biến
@@ -163,7 +163,7 @@ Hoàn thành thử thách này, bạn sẽ:
 - Phát triển kỹ năng phân tích và giám sát mạng
 - Xây dựng portfolio các công cụ cybersecurity thực tế
 
-## 🔐 Hướng Dẫn Đạo Đức
+##  Hướng Dẫn Đạo Đức
 
 ### NÊN LÀM:
 - ✅ Chỉ sử dụng công cụ trên hệ thống của bạn hoặc có quyền rõ ràng
@@ -217,7 +217,7 @@ Hoàn thành thử thách này, bạn sẽ:
 
 Dự án này được cấp phép theo Giấy phép MIT - xem file [LICENSE](LICENSE) để biết chi tiết.
 
-## ⚖️ Thông Báo Pháp Lý
+##  Thông Báo Pháp Lý
 
 Các công cụ và kỹ thuật được trình bày trong repository này chỉ dành cho mục đích giáo dục và kiểm thử được ủy quyền. Các tác giả và người đóng góp không chịu trách nhiệm cho bất kỳ việc sử dụng sai mục đích nào của các công cụ này. Người dùng hoàn toàn chịu trách nhiệm đảm bảo họ có ủy quyền phù hợp trước khi kiểm thử bất kỳ hệ thống nào.
 
