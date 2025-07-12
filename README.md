@@ -19,13 +19,13 @@
 │   ├── Day6-HTTP-Capture/
 │   └── Day7-PCAP-Analyzer/
 ├── tuan2-tu-dong-hoa/
-│   ├── ngay08-doi-mac/
-│   ├── ngay09-tan-cong-dhcp/
-│   ├── ngay10-canh-bao-ids/
-│   ├── ngay11-quet-wifi/
-│   ├── ngay12-gia-mao-ip/
-│   ├── ngay13-reverse-shell/
-│   └── ngay14-port-knocking/
+│   ├── Day8-MAC-Changer/
+│   ├── Day9-DCHP-Starvation/
+│   ├── Day10-Netword-IDS + Email-Alert/
+│   ├── Day11-Wifi-Scanner/
+│   ├── Day12-IP-Spofing/
+│   ├── Day13-Reverse-Shell/
+│   └── Day14-Port-Knocking/
 ├── tuan3-tan-cong/
 │   ├── ngay15-tan-cong-ssh/
 │   ├── ngay16-crack-password/
