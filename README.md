@@ -2,7 +2,7 @@
 
 > **⚠️ TUYÊN BỐ PHÁP LÝ**: Tất cả các công cụ và kỹ thuật trong repository này chỉ dành cho mục đích giáo dục. Chỉ sử dụng trên các hệ thống bạn sở hữu hoặc có quyền kiểm thử rõ ràng. Truy cập trái phép vào hệ thống máy tính là bất hợp pháp và phi đạo đức.
 
-## 🎯 Tổng Quan Thử Thách
+##  Tổng Quan Thử Thách
 
 Đây là thử thách 30 ngày, mỗi ngày bạn sẽ xây dựng một công cụ ethical hacking hoặc mạng nhỏ. Tập trung vào **triển khai thực tế**, **ứng dụng thực tế**, và **mô phỏng** các tình huống bảo mật trong môi trường được kiểm soát.
 
