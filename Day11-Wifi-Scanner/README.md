@@ -1,139 +1,100 @@
-# Windows MAC Changer Tool
+# WiFi Scanner
 
-Công cụ thay đổi địa chỉ MAC (Media Access Control) cho các giao diện mạng trên Windows.
+Một công cụ đơn giản để quét và hiển thị danh sách các mạng Wi-Fi có sẵn trên Windows.
 
 ## Mô tả
 
-MAC Changer Tool là một công cụ Python cho phép bạn thay đổi địa chỉ MAC của các giao diện mạng trên hệ điều hành Windows. Công cụ này hỗ trợ tự động tạo MAC address ngẫu nhiên hoặc cho phép bạn nhập MAC address tùy chỉnh.
-
-## Tính năng
-
-- ✅ Liệt kê tất cả các giao diện mạng vật lý có sẵn
-- ✅ Tự động tạo MAC address ngẫu nhiên hợp lệ
-- ✅ Cho phép nhập MAC address tùy chỉnh
-- ✅ Khởi động lại giao diện mạng tự động
-- ✅ Kiểm tra và xác minh MAC address sau khi thay đổi
-- ✅ Lọc bỏ các giao diện ảo (Virtual, VMware, Hyper-V, VPN)
+Chương trình này sử dụng lệnh `netsh` của Windows để quét và hiển thị thông tin chi tiết về các mạng Wi-Fi xung quanh, bao gồm:
+- **SSID**: Tên mạng Wi-Fi
+- **Tín hiệu**: Cường độ tín hiệu (%)
+- **Bảo mật**: Loại bảo mật (WPA2, WPA3, Open, v.v.)
+- **Kênh**: Kênh phát sóng
+- **BSSID**: Địa chỉ MAC của Access Point
 
 ## Yêu cầu hệ thống
 
-- **Hệ điều hành**: Windows (Vista/7/8/10/11)
-- **Python**: 3.6 trở lên
-- **Quyền**: Administrator (bắt buộc)
+- **Hệ điều hành**: Windows 7 trở lên
+- **Python**: Phiên bản 3.6 trở lên
+- **Quyền truy cập**: Có thể cần quyền Administrator để thực hiện một số lệnh
 
 ## Cài đặt
 
-### 1. Cài đặt Python dependencies
-
-```bash
-pip install wmi
-```
-
-### 2. Tải xuống file
-
-```bash
-git clone <repository-url>
-cd mac-changer
-```
-
-hoặc tải trực tiếp file `mac_changer.py`
+1. Đảm bảo Python đã được cài đặt trên máy tính
+2. Tải xuống file `wifi_scanner.py`
+3. Không cần cài đặt thêm thư viện nào (chỉ sử dụng thư viện chuẩn của Python)
 
 ## Cách sử dụng
 
-### 1. Chạy với quyền Administrator
-
-**Quan trọng**: Phải chạy Command Prompt hoặc PowerShell với quyền Administrator
-
+### Chạy trực tiếp
 ```bash
-python dhcp_starvation.py
+python wifi_scanner.py
 ```
 
-### 2. Chọn giao diện mạng
-
-Chương trình sẽ hiển thị danh sách các giao diện mạng có sẵn:
-
-```
-Danh sách interface khả dụng:
-0. Realtek PCIe GBE Family Controller
-1. Intel(R) Wireless-AC 9560
+### Chạy từ Command Prompt với quyền Administrator (khuyến nghị)
+1. Mở Command Prompt với quyền Administrator
+2. Điều hướng đến thư mục chứa file
+3. Chạy lệnh:
+```bash
+python wifi_scanner.py
 ```
 
-Nhập số thứ tự của giao diện bạn muốn thay đổi MAC.
+## Kết quả hiển thị
 
-### 3. Nhập MAC address
-
-- **Để tạo MAC ngẫu nhiên**: Nhấn Enter
-- **Để nhập MAC tùy chỉnh**: Nhập 12 ký tự hex (ví dụ: `02A1B2C3D4E5`)
-
-### 4. Xác minh kết quả
-
-Chương trình sẽ:
-- Hiển thị MAC address hiện tại
-- Thay đổi MAC trong registry
-- Khởi động lại giao diện mạng
-- Kiểm tra và xác minh MAC address mới
-
-## Ví dụ sử dụng
+Chương trình sẽ hiển thị bảng kết quả dưới dạng:
 
 ```
-=== Windows MAC Changer Tool ===
-
-Danh sách interface khả dụng:
-0. Realtek PCIe GBE Family Controller
-
-Chọn số thứ tự interface bạn muốn thay đổi MAC: 0
-[+] Đã chọn: Realtek PCIe GBE Family Controller
-Nhập MAC mới (hoặc Enter để tạo ngẫu nhiên): 
-
-[+] MAC ngẫu nhiên được tạo: 02A1B2C3D4E5
-[+] MAC hiện tại: AA:BB:CC:DD:EE:FF
-[+] Tìm thấy adapter: Realtek PCIe GBE Family Controller
-[+] Đổi MAC trong registry thành công. Đang khởi động lại interface...
-[*] Đang disable interface...
-[*] Đang enable interface...
-[✓] MAC đã được đổi thành: 02A1B2C3D4E5
+========================================================================
+STT  SSID                     Tín hiệu   Bảo mật              Kênh 
+========================================================================
+1    MyWiFi                   85%        WPA2-Personal        6    
+2    Neighbor_WiFi            45%        WPA2-Personal        11   
+3    Guest_Network            60%        Open                 1    
+========================================================================
 ```
 
-## Lưu ý quan trọng
+## Xử lý lỗi
 
-### ⚠️ Cảnh báo
-- **Luôn chạy với quyền Administrator**
-- Việc thay đổi MAC address có thể ảnh hưởng đến kết nối mạng
-- Một số card mạng có thể không hỗ trợ thay đổi MAC
-- MAC address sẽ được reset về giá trị mặc định khi khởi động lại hệ thống
+- **Lỗi netsh**: Nếu gặp lỗi "Không thể thực hiện lệnh netsh", hãy thử:
+  - Chạy Command Prompt với quyền Administrator
+  - Kiểm tra xem Wi-Fi adapter có được bật không
+  - Khởi động lại dịch vụ WLAN AutoConfig
 
-### 📋 Định dạng MAC hợp lệ
-- MAC address phải có 12 ký tự hex
-- Byte đầu tiên nên là `02` để đảm bảo là Locally Administered
-- Ví dụ hợp lệ: `02A1B2C3D4E5`, `0234567890AB`
+- **Không tìm thấy mạng**: Nếu hiển thị "Không tìm thấy mạng Wi-Fi nào":
+  - Kiểm tra Wi-Fi adapter có hoạt động không
+  - Đảm bảo có các mạng Wi-Fi xung quanh
+  - Thử chạy lại sau vài giây
 
-### 🔧 Khắc phục sự cố
+## Tính năng
 
-**Lỗi "Không tìm thấy interface"**:
-- Đảm bảo giao diện mạng đang hoạt động
-- Kiểm tra tên giao diện mạng trong Device Manager
+- ✅ Quét tự động các mạng Wi-Fi có sẵn
+- ✅ Hiển thị thông tin chi tiết về từng mạng
+- ✅ Định dạng bảng dễ đọc
+- ✅ Xử lý lỗi cơ bản
+- ✅ Hỗ trợ tiếng Việt
 
-**Lỗi "Registry"**:
-- Đảm bảo chạy với quyền Administrator
-- Một số card mạng có thể không hỗ trợ thay đổi MAC
+## Giới hạn
 
-**MAC không thay đổi**:
-- Thử khởi động lại máy tính
-- Kiểm tra driver card mạng
-- Thử với MAC address khác
-
-## Tính pháp lý
-
-Công cụ này được tạo ra cho mục đích học tập và kiểm thử hệ thống. Người dùng có trách nhiệm tuân thủ các quy định pháp luật và chính sách của tổ chức khi sử dụng.
-
-## Giấy phép
-
-Dự án này được phát hành dưới giấy phép MIT License.
+- Chỉ hoạt động trên Windows
+- Cần có Wi-Fi adapter để quét
+- Một số thông tin có thể cần quyền Administrator
+- Không hỗ trợ kết nối vào mạng Wi-Fi
 
 ## Đóng góp
 
-Hoan nghênh các đóng góp! Vui lòng tạo issue hoặc pull request để báo cáo lỗi hoặc đề xuất tính năng mới.
+Nếu bạn muốn đóng góp cho dự án:
+1. Fork repository
+2. Tạo branch mới cho tính năng
+3. Commit các thay đổi
+4. Tạo Pull Request
+
+## Giấy phép
+
+Dự án này được phát hành dưới giấy phép MIT.
 
 ## Liên hệ
 
-Nếu bạn gặp vấn đề hoặc có câu hỏi, vui lòng tạo issue trên repository này.
+Nếu có vấn đề hoặc đề xuất, vui lòng tạo issue trong repository.
+
+---
+
+*Lưu ý: Chương trình này chỉ dành cho mục đích học tập và sử dụng cá nhân. Vui lòng tuân thủ các quy định pháp luật về bảo mật mạng.*
