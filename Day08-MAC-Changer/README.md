@@ -45,7 +45,7 @@ hoặc tải trực tiếp file `mac_changer.py`
 **Quan trọng**: Phải chạy Command Prompt hoặc PowerShell với quyền Administrator
 
 ```bash
-python mac_changer.py
+python dhcp_starvation.py
 ```
 
 ### 2. Chọn giao diện mạng
