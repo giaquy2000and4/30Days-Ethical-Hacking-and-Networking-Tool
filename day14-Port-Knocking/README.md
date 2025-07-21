@@ -260,6 +260,6 @@ Port Knocking là một lớp bảo mật bổ sung hiệu quả, giúp ẩn d�
 
 ---
 
-**Tác giả:** [Tên của bạn]  
+**Tác giả:** Bocchi89  
 **Phiên bản:** 1.0  
 **Cập nhật lần cuối:** 21/07/2025
