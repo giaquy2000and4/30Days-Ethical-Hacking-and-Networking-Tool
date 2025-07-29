@@ -27,7 +27,7 @@ Chương trình này sử dụng lệnh `netsh` của Windows để quét và hi
 
 ### Chạy trực tiếp
 ```bash
-python wifi_scanner.py
+python ip_spofing.py
 ```
 
 ### Chạy từ Command Prompt với quyền Administrator (khuyến nghị)
@@ -35,7 +35,7 @@ python wifi_scanner.py
 2. Điều hướng đến thư mục chứa file
 3. Chạy lệnh:
 ```bash
-python wifi_scanner.py
+python ip_spofing.py
 ```
 
 ## Kết quả hiển thị
