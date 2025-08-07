@@ -1,0 +1,11 @@
+admin
+login
+Login
+dashboard
+config
+hidden
+secret
+backup
+SinhVien
+Index2ToKhaiYTe
+DaoTaoToanTruong
