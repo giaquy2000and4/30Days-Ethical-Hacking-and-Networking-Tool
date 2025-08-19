@@ -139,9 +139,9 @@ def send_test_requests(base_url='http://localhost:8080'):
         time.sleep(2)  # Đợi 2 giây giữa các request
 
 if __name__ == "__main__":
-    print("[*] Bắt đầu gửi test requests...")
+    print("[*] Bắt đầu gửi Insta-Hunter-Img requests...")
     send_test_requests()
-    print("[*] Hoàn thành test!")
+    print("[*] Hoàn thành Insta-Hunter-Img!")
 ```
 
 **Cài đặt requests nếu chưa có:**
@@ -171,7 +171,7 @@ python network_ids.py
 # Terminal 2: Chạy HTTP server
 python -m http.server 8080
 
-# Terminal 3: Gửi test requests
+# Terminal 3: Gửi Insta-Hunter-Img requests
 curl -H "User-Agent: admin" http://localhost:8080/
 # hoặc
 python send_test_packets.py
